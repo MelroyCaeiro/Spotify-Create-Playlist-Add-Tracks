@@ -33,7 +33,7 @@ for playlist in playlists['items']:
         #print("here: ", playlist_id)   # For debugging
         x = True
 
-# Create playlist if none of the same name exists (for adding to playlist if it already exists)
+# Create playlist if none of the same name exists (for adding to playlist if it hasn't been created beforehand)
 if x == False:
     create = sp.user_playlist_create(username, playlist_name, public=True, collaborative=False, description="DESCRIPTION_HERE")
     playlist_id = ''
